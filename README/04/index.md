@@ -4,14 +4,16 @@ Exercises in **level 04** can be classified in the following groups:
 ## String manipulation
 Exercises where we have to split strings, or print their words in some particular order.
 
-* [ft_split]()
-* [rostring]()
-* [rev_wstr]()
+Exercise                | ETA
+------------------------|----------
+[ft_split](./strings/ft_split.md)   | 15 minutes
+[rostring](./strings/rostring.md)   | 15 minutes
+[rev_wstr](./strings/rev_wstr.md)   | 15 minutes
 
 ## Linked lists
 The exercises related with linked lists are:
 
-Exercise				| ETA
+Exercise                | ETA
 ------------------------|----------
 [ft_list_foreach](ft_list_foreach.md)	| 5 minutes
 [ft_remove_if](ft_list_remove_if.md)	| 10-15 minutes

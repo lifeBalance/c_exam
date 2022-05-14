@@ -9,8 +9,6 @@ int	count_words(char *s)
 {
 	int	count;
 
-	while (*s && ft_isspace(*s))
-		s++;
 	count = 0;
 	while (*s)
 	{
@@ -36,7 +34,6 @@ int	word_len(char *s)
 	return (len);
 }
 
-// #include <stdio.h>
 char	**ft_split(char *str)
 {
 	char	**arr;
@@ -44,12 +41,9 @@ char	**ft_split(char *str)
 	int		i;
 
 	words = count_words(str);
-	// printf("%d words\n", words);
 	arr = (char **)malloc(sizeof(char *) * (words + 1));
 	if (!arr)
 		return (0);
-	while (*str && ft_isspace(*str))
-		str++;
 	words = 0;
 	while (*str)
 	{

@@ -18,11 +18,11 @@ Example:
 $>./rostring "abc   " | cat -e
 abc$
 $>
-$>./rostring "Que la      lumiere soit et la lumiere fut"
-la lumiere soit et la lumiere fut Que
+$>./rostring "Que la      lumiere soit et la lumiere fut" | cat -e
+la lumiere soit et la lumiere fut Que$
 $>
-$>./rostring "     AkjhZ zLKIJz , 23y"
-zLKIJz , 23y AkjhZ
+$>./rostring "     AkjhZ zLKIJz , 23y"  | cat -e
+zLKIJz , 23y AkjhZ$
 $>
 $>./rostring | cat -e
 $

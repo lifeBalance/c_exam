@@ -11,7 +11,7 @@ int		word_len(char *s)
 	int	len;
 
 	len = 0;
-	while (s[len])
+	while (s[len] && !ft_isspace(s[len]))
 		len++;
 	return (len);
 }
@@ -37,12 +37,9 @@ void	rostring(char *s)
 	}
 	while (*s)
 	{
-		if (*s && ft_isspace(*s))
-		{
-			while (*s && ft_isspace(*s))
-				s++;
-		}
-		else if (*s && !ft_isspace(*s))
+		while (*s && ft_isspace(*s))
+			s++;
+		if (*s && !ft_isspace(*s))
 		{
 			while (*s && !ft_isspace(*s))
 			{
