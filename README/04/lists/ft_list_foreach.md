@@ -35,6 +35,6 @@ The **include guard** on the header itself is a nice addition ;-)
 [:arrow_backward:][back] ║ [:house:][home] ║ [:arrow_forward:][next]
 
 <!-- navigation -->
-[home]: ../../README.md
-[back]: ../../README.md
-[next]: ../05/index.md
+[home]: ../../../README.md
+[back]: ./lists.md
+[next]: ./ft_list_remove_if.md
