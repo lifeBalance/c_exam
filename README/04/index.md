@@ -7,8 +7,8 @@ Exercises where we have to split strings, or print their words in some particula
 Exercise                | ETA
 ------------------------|----------
 [ft_split](./strings/ft_split.md)   | 15 minutes
-[rostring](./strings/rostring.md)   | 15 minutes
 [rev_wstr](./strings/rev_wstr.md)   | 15 minutes
+[rostring](./strings/rostring.md)   | 15 minutes
 
 ## Linked lists
 The exercises related with linked lists are:
@@ -35,13 +35,15 @@ Some exercises have to do with converting numbers to strings, or dealing with pr
 * [ft_itoa_base]()
 
 ## Algorithms
-Lastly there's a group of exercises where we have to come up with some algorithm:
+Lastly there's a group of exercises where we have to come up with some sort of algorithm:
 
-* [sort_int_tab](sort_int_tab.md)
-* [moment]()
-* [brainfuck]()
-* [flood_fill]()
-* [checkmate]()
+Exercise                | ETA
+------------------------|----------
+[brainfuck](./algorithms/brainfuck.md)      | x minutes
+[checkmate](./algorithms/checkmate.md)      | x minutes
+[flood_fill](./algorithms/flood_fill.md)    | x minutes
+[moment](./algorithms/moment.md)            | 15 minutes
+[sort_int_tab](sort_int_tab.md)             | x minutes
 
 ---
 [:arrow_backward:][back] ║ [:house:][home] ║ [:arrow_forward:][next]

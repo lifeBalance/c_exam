@@ -22,12 +22,12 @@ In the main function (`rostring`) we take the following steps:
 
 * At the end of the function, we free the space assigned to the allocated word.
 
-> As you may have notice, we're just allocating space for the first string. There's no need to do that for the remaining ones.
+> As you may have notice, we've allocated space for the first word. There's no need to do that for the remaining ones.
 
 ---
 [:arrow_backward:][back] ║ [:house:][home] ║ [:arrow_forward:][next]
 
 <!-- navigation -->
 [home]: ../../README.md
-[back]: ./ft_split.md
-[next]: ./rev_wstr.md
+[back]: ./rev_wstr.md
+[next]: ../index.md

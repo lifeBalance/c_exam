@@ -45,5 +45,5 @@ The loop stops when `arr[i]` hits the **null pointer** at the end (sentinel valu
 
 <!-- navigation -->
 [home]: ../../README.md
-[back]: ../../README.md
+[back]: ../index.md
 [next]: ./rostring.md

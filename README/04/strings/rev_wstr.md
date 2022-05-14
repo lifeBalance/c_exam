@@ -30,5 +30,5 @@ To solve the problem I wrote the following **helper functions**:
 
 <!-- navigation -->
 [home]: ../../README.md
-[back]: ./rev_wstr.md
-[next]: ../index.md
+[back]: ./ft_split.md
+[next]: ./rostring.md

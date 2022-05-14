@@ -7,14 +7,13 @@
 
 char	*build_moments(unsigned int time, char *time_unit);
 int		get_digits_len(unsigned int n);
-char	*alloc_string(int len);
 char	*ft_strcat(char *dst, char *src);
 char	*mini_itoa(unsigned int n);
 int		ft_strlen(char *s);
 
 char	*moment(unsigned int duration)
 {
-	char	*s = 0;
+	char	*s;
 
 	if (duration >= SEC_PER_MONTH)
 		s = build_moments(duration / SEC_PER_MONTH, "month");
@@ -24,7 +23,7 @@ char	*moment(unsigned int duration)
 		s = build_moments(duration / SEC_PER_HOUR, "hour");
 	else if (duration >= SEC_PER_MIN && duration < SEC_PER_HOUR)
 		s = build_moments(duration / SEC_PER_MIN, "minute");
-	else if (duration < SEC_PER_MIN)
+	else
 		s = build_moments(duration, "second");
 	return (s);
 }
@@ -38,9 +37,11 @@ char	*build_moments(unsigned int time, char *time_unit)
 	len = get_digits_len(time);
 	if (time == 1)
 	{
-		s = alloc_string(len +	ft_strlen(" ") +
-								ft_strlen(time_unit) +
-								ft_strlen(" ago.") + 1);
+		s = (char *)malloc(len + ft_strlen(" ") +
+								 ft_strlen(time_unit) +
+								 ft_strlen(" ago.") + 1);
+		if (!s)
+			return (0);
 		n = mini_itoa(time);
 		ft_strcat(s, n);
 		free(n);
@@ -50,9 +51,11 @@ char	*build_moments(unsigned int time, char *time_unit)
 	}
 	else
 	{
-		s = alloc_string(len +	ft_strlen(" ") +
-								ft_strlen(time_unit) +
-								ft_strlen("s ago.") + 1);
+		s = (char *)malloc(len + ft_strlen(" ") +
+								 ft_strlen(time_unit) +
+								 ft_strlen("s ago.") + 1);
+		if (!s)
+			return (0);
 		n = mini_itoa(time);
 		ft_strcat(s, n);
 		free(n);
@@ -97,22 +100,14 @@ char	*mini_itoa(unsigned int n)
 	return (s);
 }
 
-char	*alloc_string(int len)
-{
-	char	*s;
-
-	s = (char *)malloc(len);
-	if (!s)
-		return (0);
-	return (s);
-}
-
 int		get_digits_len(unsigned int n)
 {
 	int	len;
 
-	len = 1;
-	while (n > 10)
+	if (n == 0)
+		return (1);
+	len = 0;
+	while (n)
 	{
 		len++;
 		n /= 10;

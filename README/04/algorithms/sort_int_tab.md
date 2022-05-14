@@ -29,5 +29,5 @@ It's like **Stupid sort**, but instead of backing up the counter to the very beg
 
 <!-- navigation -->
 [home]: ../../README.md
-[back]: ../../README.md
-[next]: ../05/index.md
+[back]: ./moment.md
+[next]: ../index.md
