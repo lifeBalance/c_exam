@@ -15,17 +15,13 @@ int	ft_isspace(char ch)
 	return (ch == ' ' || ch == '\t' || ch == '\n');
 }
 
-int	print_word(char *s)
+void	print_word(char *s)
 {
-	int	i;
-
-	i = 0;
 	while (*s && !ft_isspace(*s))
-		i += write(1, s++, 1);
-	return (i);
+		write(1, s++, 1);
 }
 
-int	last(char *s, int i)
+int	last_word(char *s, int i)
 {
 	while(i >= 0 && ft_isspace(s[i]))
 		i--;
@@ -35,22 +31,17 @@ int	last(char *s, int i)
 void	rev_wstr(char *s)
 {
 	int	i;
-	int	len;
 
-	len = ft_strlen(s);
 	i = ft_strlen(s) - 1;
 	while (i >= 0 && ft_isspace(s[i]))
 		i--;
 	while (i >= 0)
 	{
-		if (i - 1 < 0 || ft_isspace(s[i - 1]))
+		if (!ft_isspace(s[i]) && (i - 1 < 0 || ft_isspace(s[i - 1])))
 		{
-			if (!ft_isspace(s[i]))
-			{
-				print_word(s + i);
-				if (!last(s, i - 1))
-					write(1, " ", 1);
-			}
+			print_word(s + i);
+			if (!last_word(s, i - 1))
+				write(1, " ", 1);
 		}
 		i--;
 	}
