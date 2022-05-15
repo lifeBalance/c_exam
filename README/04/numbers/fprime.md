@@ -39,5 +39,5 @@ If you're wondering why we use a **nested loop**, that's because a number may ha
 
 <!-- navigation -->
 [home]: ../../../README.md
-[back]: ../../../README.md
+[back]: ../index.md
 [next]: ./ft_itoa.md

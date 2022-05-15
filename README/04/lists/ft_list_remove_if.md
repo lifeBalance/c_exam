@@ -6,6 +6,9 @@ This exercise is about writing a function that removes a node if the return valu
 
 This exercise is a **bit tricky**, since the [subject](https://github.com/lifeBalance/c_exam/blob/main/04/ft_list_remove_if/subject.en.txt) requires us to delete **any** node whose payload matches the `data_ref` argument. Which means that our function should be able to delete **not only** the **first match**, but **all of them** if that's the case.
 
+> Read [here](./lists.md) to learn how to create functions to **create nodes**, **append nodes**, and **print a list**.
+
+## My approach
 The strategy I followed was:
 
 1. Use a loop that will delete consecutive matches at the **head** of the list.

@@ -3,6 +3,7 @@ This exercise is about writing a function that receives a **function pointer** a
 
 > Here you can check the [subject](https://github.com/lifeBalance/c_exam/blob/main/04/ft_list_foreach/subject.en.txt).
 
+## Small advice
 Even though the **subject** asks us to apply the function argument as:
 ```c
 (*f)(list_ptr->data);
@@ -17,7 +18,7 @@ The reason why the line above works, it's that a **bare function name** is alrea
 
 > The exercise itself can be finished in a **couple of minutes** if you take your time to understand how linked-lists (and function pointers) work.
 
-There's more work involved writing the functions to create nodes, append nodes, and print a list, than for the `ft_list_foreach` itself. Honestly, the formers should be second nature.
+There's more work involved writing the functions to **create nodes**, **append nodes**, and **print a list**, than for the `ft_list_foreach` itself. Honestly, the formers should be second nature. Read what we wrote [here](./lists.md) about these functions.
 
 ## The header
 The `t_list` type definition must be put in a **header file** named `ft_list.h`. This header must be included both in the `ft_list_foreach.c` and in `main.c` (if we want to test the whole thing) 
