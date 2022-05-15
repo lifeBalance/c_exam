@@ -1,12 +1,7 @@
 # ft_list_foreach
 This exercise is about writing a function that receives a **function pointer** and applies it to each node of a linked list. It's a matter or traversing the list from beginning to end, calling the function argument on the `data` of each node.
 
-Exercise				| ETA
----------------- -------|----------
-[ft_list_foreach](https://github.com/lifeBalance/c_exam/blob/main/04/ft_list_foreach/ft_list_foreach.c)		| 5 minutes
-
 > Here you can check the [subject](https://github.com/lifeBalance/c_exam/blob/main/04/ft_list_foreach/subject.en.txt).
-
 
 Even though the **subject** asks us to apply the function argument as:
 ```c
