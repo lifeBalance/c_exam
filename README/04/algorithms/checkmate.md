@@ -1,9 +1,9 @@
-# brainfuck
-This exercise is about sorting an array of integers in **ascending order**.
+# checkmate
+This exercise is about 
 
-> Here you can check the [subject]().
+> Here you can check the [subject](https://github.com/lifeBalance/c_exam/blob/main/04/checkmate/subject.en.txt).
 
-For this problem, I used several basic but inefficient algorithms:
+
 
 ---
 [:arrow_backward:][back] ║ [:house:][home] ║ [:arrow_forward:][next]

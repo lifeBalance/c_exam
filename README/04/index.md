@@ -30,9 +30,11 @@ The ETA for completion above doesn't take into account the functions that we nee
 ## Numbers
 Some exercises have to do with converting numbers to strings, or dealing with prime numbers.
 
-* [fprime]()
-* [ft_itoa]()
-* [ft_itoa_base]()
+Exercise                | ETA
+------------------------|----------
+[fprime](./numbers/fprime.md)           | 10-15 minutes
+[ft_itoa](./numbers/ft_itoa.md)         | x minutes
+[ft_itoa_base](./numbers/ft_itoa.md)    | x minutes
 
 ## Algorithms
 Lastly there's a group of exercises where we have to come up with some sort of algorithm:

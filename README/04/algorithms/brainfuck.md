@@ -44,7 +44,7 @@ If it's an **opening** bracket we'll be moving the pointing forwards, in order t
 
 > The logic for matching an **opening** bracket is the same, only that we move the **index** backwards, decreasing its value.
 
-This function returns the index of the bracket we jumped to.
+This function returns the **index** of the bracket we jumped to, but back in the `main` function, at the bottom of the loop, the index used to traverse the program is increased right before the next iteration.
 
 ---
 [:arrow_backward:][back] ║ [:house:][home] ║ [:arrow_forward:][next]
