@@ -9,16 +9,17 @@ In `ft_itoa` we take the following steps:
 
 1. Store the amount of digits in the `len` variable.
 
-2. Increase the `len` variable by one if the number is negative (we need to allocate space for the `-` sign in our string).
+2. Increase the `len` variable by one if the number is **negative** (we need to allocate space for the `-` sign in our string).
 
-3. Allocate `len` plus one for the **null-character**.
+3. Allocate `len` bytes, plus one for the **null-character**.
 
 4. Place the **null-character** at the position of `len` (remember we allocated `len + 1`, which means that the index `len` is within boundaries).
 
 5. Decrease the value of `len` by one, so that it points at the position of the last digit (right before the null).
 
-6. If the number is **negative**, place the `-` sign at `s[0]`, and assign to `cpy` the absolute value of `nbr`. If it's **positive**, assign `nbr` to `cpy`.
-7. Now we use a loop to iterate over the positions in `s`, starting from the end. Remember that we left `len` pointing to the least significant digit. On each iteration we store the character version of the digit in the right place, and divide `cpy` by 10.
+6. If the number is **negative**, place the `-` sign at `s[0]`, and assign to `cpy` the absolute value of `nbr`. If it's **positive**, just assign `nbr` to `cpy`.
+
+7. Now we use a loop to iterate over the positions in `s`, starting from the **least significant digit**. Remember that we left `len` pointing to the least significant digit. On each iteration we store the character version of the digit in the right place, and divide `cpy` by 10.
 
 8. Finally, we return the string.
 

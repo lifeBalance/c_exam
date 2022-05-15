@@ -17,7 +17,7 @@ Exercise                | ETA
 ------------------------|----------
 [ft_list_foreach](ft_list_foreach.md)	| 5 minutes
 [ft_remove_if](ft_list_remove_if.md)	| 10-15 minutes
-[ft_sort_list](ft_sort_list.md)			| x minutes
+[ft_sort_list](ft_sort_list.md)			| 15-20 minutes
 
 The ETA for completion above doesn't take into account the functions that we need for:
 
@@ -32,20 +32,22 @@ Some exercises have to do with converting numbers to strings, or dealing with pr
 
 Exercise                | ETA
 ------------------------|----------
-[fprime](./numbers/fprime.md)           | 10-15 minutes
-[ft_itoa](./numbers/ft_itoa.md)         | x minutes
-[ft_itoa_base](./numbers/ft_itoa.md)    | x minutes
+[fprime](./numbers/fprime.md)               | 10-15 minutes
+[ft_itoa](./numbers/ft_itoa.md)             | 10-15 minutes
+[ft_itoa_base](./numbers/ft_itoa_base.md)    | 15-20 minutes
 
 ## Algorithms
 Lastly there's a group of exercises where we have to come up with some sort of algorithm:
 
 Exercise                | ETA
 ------------------------|----------
-[brainfuck](./algorithms/brainfuck.md)      | x minutes
-[checkmate](./algorithms/checkmate.md)      | x minutes
-[flood_fill](./algorithms/flood_fill.md)    | x minutes
-[moment](./algorithms/moment.md)            | 15 minutes
-[sort_int_tab](./algorithms/sort_int_tab.md)             | x minutes
+[brainfuck](./algorithms/brainfuck.md)          | 20 minutes
+[checkmate](./algorithms/checkmate.md)          | 30 minutes
+[flood_fill](./algorithms/flood_fill.md)        | 20 minutes
+[moment](./algorithms/moment.md)                | 15 minutes
+[sort_int_tab](./algorithms/sort_int_tab.md)    | 15 minutes
+
+> `checkmate` is quite long, so even though it's good idea to practice it, may be also a good one to skip it during exam, especially if time is short.
 
 ---
 [:arrow_backward:][back] ║ [:house:][home] ║ [:arrow_forward:][next]

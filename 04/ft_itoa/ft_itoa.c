@@ -21,7 +21,6 @@ char	*ft_itoa(int nbr)
 	int		cpy;
 	int		len;
 
-	s = 0;
 	len = count_digits((nbr > 0) ? nbr : -nbr);
 	len += (nbr < 0);
 	s = (char *)malloc(len + 1);
