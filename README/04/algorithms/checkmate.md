@@ -9,6 +9,6 @@ For this problem, I used several basic but inefficient algorithms:
 [:arrow_backward:][back] ║ [:house:][home] ║ [:arrow_forward:][next]
 
 <!-- navigation -->
-[home]: ../../README.md
-[back]: ../../README.md
-[next]: ../05/index.md
+[home]: ../../../README.md
+[back]: ./brainfuck.md
+[next]: ./flood_fill.md

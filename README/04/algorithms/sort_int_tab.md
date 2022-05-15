@@ -28,6 +28,6 @@ It's like **Stupid sort**, but instead of backing up the counter to the very beg
 [:arrow_backward:][back] ║ [:house:][home] ║ [:arrow_forward:][next]
 
 <!-- navigation -->
-[home]: ../../README.md
+[home]: ../../../README.md
 [back]: ./moment.md
 [next]: ../index.md
