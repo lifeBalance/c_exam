@@ -13,15 +13,23 @@ For this problem, I used several helper functions:
 
 * `get_digits_len`: which returns the amount of digits of a positive integer.
 
-* `build_moments`: which receives a string with the `time_unit` (second, minute, hour, etc) and the duration in the aforementioned time unit. Then allocates space in memory for a string, taking into consideration the plural or singular form of the noun.
-Then it calls `mini_itoa` which returns a string with the duration. Finally it concatenates the substrings and returns the string.
+These helper functions are used in the next two functions:
 
-* `moment`: which is the main function is a switcher that calls `build_moments` passing two arguments:
+* `moment`: which is the function that we call from `main`. What we do here is to call the `build_moments` function once we have divided the `duration` arguments (received in **seconds**) by a macro, depending on the amount of seconds we receive. Once we've done that, we call `build_moments` passing two arguments:
 
-    * An **integer** with the duration in either months, days, hours, minutes or seconds.
+    * An **integer** with the duration in either months, days, hours, minutes or seconds (resulting of the integer division, which truncates the decimal part).
     * A **string**: `month`, `day`, `hour`, `minute`, or `second`.
 
  This function returns the string that `build_moments` creates.
+
+* `build_moments` receives the **string** with the `time_unit` (second, minute, hour, etc) and the **integer** `time`, with duration in the aforementioned time unit. Then it allocates space in memory taking into consideration:
+
+    * The length of the digits in `time`.
+    * The length of the plural or singular form of the word `time_unit`.
+    * Also the spaces and the part of the string ` ago.`, which is constant.
+
+Once the space in memory is allocated, it calls `mini_itoa` which returns a numeric string with the duration. Finally it concatenates the substrings, free the memory for the numeric string (it's already copied) and returns the resulting string.
+
 
 ---
 [:arrow_backward:][back] ║ [:house:][home] ║ [:arrow_forward:][next]

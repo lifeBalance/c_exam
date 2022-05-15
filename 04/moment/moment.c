@@ -34,68 +34,55 @@ char	*build_moments(unsigned int time, char *time_unit)
 	char	*n;
 	int		len;
 
-	len = get_digits_len(time);
-	if (time == 1)
-	{
-		s = (char *)malloc(len + ft_strlen(" ") +
-								 ft_strlen(time_unit) +
-								 ft_strlen(" ago.") + 1);
-		if (!s)
-			return (0);
-		n = mini_itoa(time);
-		ft_strcat(s, n);
-		free(n);
-		ft_strcat(s, " ");
-		ft_strcat(s, time_unit);
-		ft_strcat(s, " ago.");
-	}
-	else
-	{
-		s = (char *)malloc(len + ft_strlen(" ") +
-								 ft_strlen(time_unit) +
-								 ft_strlen("s ago.") + 1);
-		if (!s)
-			return (0);
-		n = mini_itoa(time);
-		ft_strcat(s, n);
-		free(n);
-		ft_strcat(s, " ");
-		ft_strcat(s, time_unit);
-		ft_strcat(s, "s ago.");
-	}
+	len =	get_digits_len(time) +
+			ft_strlen(" ") +
+			ft_strlen(time_unit) +
+			ft_strlen(" ago.");
+	if (time != 1)
+		len += ft_strlen("s");
+	s = (char *)malloc(len + 1);
+	if (!s)
+		return (0);
+	n = mini_itoa(time);
+	ft_strcat(s, n);
+	free(n);
+	ft_strcat(s, " ");
+	ft_strcat(s, time_unit);
+	if (time != 1)
+		ft_strcat(s, "s");
+	ft_strcat(s, " ago.");
 	return (s);
 }
 
 char	*ft_strcat(char *dst, char *src)
 {
-	char	*bkp;
+	char	*tmp;
 
-	bkp = dst;
-	while (*dst)
-		dst++;
+	tmp = dst;
+	while (*tmp)
+		tmp++;
 	while (*src)
-		*dst++ = *src++;
-	*dst = 0;
-	return (bkp);
+		*tmp++ = *src++;
+	*tmp = 0;
+	return (dst);
 }
 
 char	*mini_itoa(unsigned int n)
 {
 	char	*s;
-	int		size;
+	int		len;
 
-	size = get_digits_len(n) + 1;
-	s = malloc(size + 1);
+	len = get_digits_len(n);
+	s = malloc(len + 1);
 	if (!s)
 		return (0);
-	size--;		// back to the position of the null-character
-	s[size] = 0;
-	size--;		// back once more to the position of the least significant digit
-	while (size >= 0)
+	s[len] = 0;	// len is at the position of the null-character
+	len--;		// move to the least significant digit
+	while (len >= 0)
 	{
-		s[size] = (n % 10) + '0';
+		s[len] = (n % 10) + '0';
 		n /= 10;
-		size--;
+		len--;
 	}
 	return (s);
 }
