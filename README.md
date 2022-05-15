@@ -7,6 +7,26 @@
 * [Level 4](README/04/index.md)
 * [Level 5](README/05/index.md)
 
+## Debugging Tips
+Steps:
+
+1. **Compile** all files with the `-g` flag.
+
+2. Start **debugging**:
+```
+lldb NAME_OF_YOUR_PROGRAM
+```
+
+To set a **breakpoint** in line 3:
+```
+b 3
+```
+
+To see the **value of a variable**:
+```
+p var_name
+```
+
 ---
 [:arrow_backward:][back] ║ [:house:][home] ║ [:arrow_forward:][next]
 
