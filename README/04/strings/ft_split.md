@@ -12,19 +12,22 @@ A sequence of **non-whitespace characters** at the **beginning** or at the **end
 ## My approach
 To solve the problem I wrote the following **helper functions**:
 
-* `ft_isspace`: This simple function will return `1` if its character argument is one of the whitespace characters asked in the subject.
-* `count_words`: Since we have to **allocate** space in memory for each word, and we don't know how many words our function is gonna receive, the first thing is to write a function to traverse the string counting how many words it contains.
-* `word_len`: It traverses its string argument counting the words, as defined in the subject.
+* `ft_isspace`: This simple function will return `1` if its character argument is one of the whitespace characters asked in the subject; it will return `0` otherwise.
+
+* `count_words`: Since we have to **allocate** space in memory for each word, and we don't know how many words our function is gonna receive, the first thing is to write a function to count how many words its string argument contains.
+
+* `word_len`: It receives a string (pointing to a non-whitespace character). It uses a loop to traverse it, counting the non-whitespace characters, and incrementing the `len` variable. The loop exits as soon as it hits a whitespace character. It returns the **length** of the word.
 
 In the main function (`ft_split`) we take the following steps:
 
 * Count the words and **allocate** as many `char *` as words are counted, plus one, which will be a `NULL` pointer to terminate the array.
+
 * Use a **loop** to traverse the **original string** character by character. A nested **if statement** will be triggered as soon as a **non-whitespace** character is found and the following will happen:
 
     * Count the word's length using the `word_len` helper.
-    * Allocate space in memory for the word, plus one character to **null-terminate** the string.
-    * Use a nested loop to iterate over the string, copying its non-whitespace characters to the newly allocated `char *`. As soon as we hit a **whitespace** we break out of the loop, and we null terminate that string, increase the `word` counter and add a **null character** (yeah, each word added to the array, even if it's not the last one, it's inmediately followed by a null. That way we don't have to keep track of which one is the last word, in order to put the null right after).
-    * The other main piece in the outer loop is another inner loop to skip whitespace.
+    * Allocate `len` bytes in memory for the word, plus one for the `\0` (They must be **null-terminated** strings).
+    * Use a **nested loop** to iterate over the string, copying its non-whitespace characters to the newly allocated `char *`. As soon as we hit a **whitespace** we break out of the loop, and we null terminate that string, increase the `word` counter and add a **null character** (yeah, each word added to the array, even if it's not the last one, it's inmediately followed by a **null**. That way we don't have to keep track of which one is the last word, in order to put the null right after).
+    * The other main piece in the outer loop is another inner **loop** to **skip whitespace**.
 
 * At the end of the function, we return the array of words.
 
