@@ -19,5 +19,5 @@ Exercise				| ETA
 
 <!-- navigation -->
 [home]: ../../../README.md
-[back]: ./lists.md
-[next]: ./ft_list_remove_if.md
+[back]: ./ft_list_remove_if.md
+[next]: ../index.md

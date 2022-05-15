@@ -15,9 +15,9 @@ The exercises related with linked lists are:
 
 Exercise                | ETA
 ------------------------|----------
-[ft_list_foreach](ft_list_foreach.md)	| 5 minutes
-[ft_remove_if](ft_list_remove_if.md)	| 10-15 minutes
-[ft_sort_list](ft_sort_list.md)			| 15-20 minutes
+[ft_list_foreach](./lists/ft_list_foreach.md)	| 5 minutes
+[ft_remove_if](./lists/ft_list_remove_if.md)	| 10-15 minutes
+[ft_sort_list](./lists/ft_sort_list.md)			| 15-20 minutes
 
 The ETA for completion above doesn't take into account the functions that we need for:
 

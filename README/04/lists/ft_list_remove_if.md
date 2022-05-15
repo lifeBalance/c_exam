@@ -27,5 +27,5 @@ The `t_list` type definition must be put in a **header file** named `ft_list.h`.
 
 <!-- navigation -->
 [home]: ../../README.md
-[back]: ../../README.md
-[next]: ../05/index.md
+[back]: ./ft_list_foreach.md
+[next]: ./sort_list.md
