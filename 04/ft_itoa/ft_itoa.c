@@ -1,5 +1,20 @@
 #include <stdlib.h>
 
+static int	count_digits(int n)
+{
+	int	len;
+
+	if (n == 0)
+		return (1);
+	len = 0;
+	while (n)
+	{
+		n /= 10;
+		len++;
+	}
+	return (len);
+}
+
 char	*ft_itoa(int nbr)
 {
 	char	*s;
@@ -7,13 +22,7 @@ char	*ft_itoa(int nbr)
 	int		len;
 
 	s = 0;
-	cpy = (nbr > 0) ? nbr : -nbr;
-	len = 1;
-	while (cpy / 10)
-	{
-		cpy /= 10;
-		len++;
-	}
+	len = count_digits((nbr > 0) ? nbr : -nbr);
 	len += (nbr < 0);
 	s = (char *)malloc(len + 1);
 	if (!s)

@@ -45,7 +45,7 @@ Exercise                | ETA
 [checkmate](./algorithms/checkmate.md)      | x minutes
 [flood_fill](./algorithms/flood_fill.md)    | x minutes
 [moment](./algorithms/moment.md)            | 15 minutes
-[sort_int_tab](sort_int_tab.md)             | x minutes
+[sort_int_tab](./algorithms/sort_int_tab.md)             | x minutes
 
 ---
 [:arrow_backward:][back] ║ [:house:][home] ║ [:arrow_forward:][next]
