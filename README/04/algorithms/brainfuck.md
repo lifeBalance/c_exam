@@ -9,7 +9,7 @@ Since we've been asked for a **program**, most of the interpreter logic is place
 First thing we do is declare a `char` (which takes a byte) array of **2048** elements (with the help of a `SIZE` macro). We initialize all of its elements to `0` at the same time we declare it (`= {0}`).
 
 ## The program
-The program is given as a **first argument**. We declared a `char` pointer named `program` to make it more explicit. Even though the subject mentions that it won't have more than **4096** operations, we're not checking for that (nor did any of the implementations I checked online).
+The program is given as a **first argument** (`argv[1]`). We declared a `char` pointer named `program` to make it more explicit. Even though the subject mentions that it won't have more than **4096** operations, we're not checking for that (nor did any of the implementations I checked online).
 
 ## The mechanics
 The deal is to read instructions from the `program`, character by character (each instruction is **one** character long). For that we created a **loop** to traverse `program` using the index `i` (could be done with a pointer too).
