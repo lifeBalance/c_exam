@@ -16,23 +16,27 @@ The subject asks us to simply display a **newline** if the number of parameters 
 ## Is prime?
 The first thing I did was to write a **helper function** named `isprime` which receives an integer number as argument and returns `1` if it's **prime**, `0` otherwise.
 
-In this function we set up a variable named `div` and initialize it to `2`; that's because **primes** are divisible by themselves and `1`.
+> Remember, a **prime number** is evenly divisible by `1` and itself.
 
-Then, in a loop, we iterate over the potential divisors of the number; as soon as one divides the number evenly, we return `0` (meaning the number is **not prime**).
+In this function we set up a variable named `div` and initialize it to `2` (all numbers, primes and no primes, are divisible by `0` and `1`).
 
-> We don't need to examine all the divisors up to our number, we just have to get to half the number. No number can be evenly divide by a number greater than his half (10 / 2 = 5).
+Then, in a loop, we keep increasing `div` and checking if `n` is evenly divisible by it. As soon as one divides the number evenly, we return `0` (meaning the number is **not prime**).
 
-But if we reach the end of the loop, it means that `div` got up to half the number, and no number in between could evenly divide our number; which means that our number is **prime**, and we return `1`.
+> We don't need to examine all the divisors up to our number, we just have to get to **half the number** (`div <= n / s`). No number can be evenly divided by a number greater than his half (you can't evenly divide 4 by 3, can you?).
+
+But if we reach the end of the loop, meaning that `div` got up to half the number and couldn't evenly divide our number, that means that our number is **prime**, and we return `1`.
 
 ## Fprime
-Then in `fprime`, first thing we do is to check if the argument we pass from `main` is a prime; if it is, we print it and get out of the function with an empty `return` statement.
+Then in `fprime`, first thing we do is to check if the argument we pass from `main` is a **prime**; if it is, we print it and job's done (we get out of the function with an empty `return` statement).
 
-If the number is not prime, we set up a loop that will iterate for as long as the number is greater than `1`. Inside this loop, we'll use a **nested loop**, where we use the same exit condition, plus we check that `div` is prime number and also a factor of the number:
+> The first check mentioned above is necessary because big numbers such as `804577` (which is prime) take a long time to check.
+
+If the number is not prime, we set up a loop that will keep dividing our number by its factors in each iteration (We get out when the number becomes `1`). Inside this loop, we'll use a **nested loop**, where we use the same exit condition, plus we check that `div` is **prime** number and also a **factor** of the number (meaning it divides it evenly):
 
     * If the condition is fullfilled, we print the factor and an `*` as a separator.
     * If not, we exit the nested loop and increase the `div` variable (potential factors).
 
-If you're wondering why we use a **nested loop**, that's because a number may have a prime factor repeated several times; for example, the prime factors of `24` are `3*3*3`. So in this inner loop we keep printing the same factor as many times as needed, without increasing `div`.
+If you're wondering why we use a **nested loop**, that's because a number may have a prime factor repeated several times; for example, the prime factors of `27` are `3*3*3`. So in this inner loop we keep printing the same factor as many times as needed, without increasing `div`.
 
 ---
 [:arrow_backward:][back] ║ [:house:][home] ║ [:arrow_forward:][next]
