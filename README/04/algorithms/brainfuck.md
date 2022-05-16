@@ -6,7 +6,7 @@ In this exercise we have to write a [Brainfuck](https://en.wikipedia.org/wiki/Br
 Since we've been asked for a **program**, most of the interpreter logic is place in `main`.
 
 ## The data
-First thing we do is declare a `char` (which takes a byte) array of **2048** elements (with the help of a `SIZE` macro). We initialize all of its elements to `0` at the same time we declare it (`= {0}`).
+First thing we do is declare a `char` array of **2048** elements (2048 bytes) with the help of a `SIZE` macro. We initialize all of its elements to `0` at the same time we declare it (`= {0}`).
 
 ## The program
 The program is given as a **first argument** (`argv[1]`). We declared a `char` pointer named `program` to make it more explicit. Even though the subject mentions that it won't have more than **4096** operations, we're not checking for that (nor did any of the implementations I checked online).
@@ -35,7 +35,7 @@ There are a couple of `program` instructions to jump around the brainfuck *code*
 We outsourced the code to deal with these two instructions to a function named `match`. This function receives two arguments:
 
 * A pointer to the beginning of `program`.
-* An index pointing to the exact position where the bracket is.
+* The index of the bracket that triggered the call.
 
 If it's an **opening** bracket we'll be moving the pointing forwards, in order to match the **closing** one. We use a variable named `matches`, initialized to zero. Then a **loop** will keep increasing the **index** value searching for the **closing** bracket. Two interesting things happen here:
 
