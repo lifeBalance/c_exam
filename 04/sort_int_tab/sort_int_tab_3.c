@@ -10,21 +10,19 @@ static void	swap(int *a, int *b)
 /*
 ** Bubble sort
 */
-void		sort_int_tab(int *tab, unsigned int size)
+void	sort_int_tab(int *tab, unsigned int size)
 {
-	unsigned int	i;
 	unsigned int	j;
 
-	i = 0;
-	while (i + 1 < size - 1)
+	while (size > 0)	// loop exits when size == 0.
 	{
 		j = 0;
-		while (j < size - 1 - i)
+		while (j < size - 1)
 		{
 			if (tab[j] > tab[j + 1])
 				swap(tab + j, tab + j + 1);
 			j++;
 		}
-		i++;
+		size--;			// we decrease the size by one on each iteration.
 	}
 }
