@@ -24,6 +24,8 @@ It's like **Stupid sort**, but instead of backing up the counter to the very beg
 
 ![bubble sort](../img/bubble_sort.gif "bubble sort")
 
+Basically we set up an **outer loop** which will increasingly decrease the size, and an inner loop that will compare pair of elements until we get to the end of the array.
+
 ---
 [:arrow_backward:][back] ║ [:house:][home] ║ [:arrow_forward:][next]
 
