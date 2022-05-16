@@ -32,8 +32,6 @@ void	rostring(char *s)
 		while (*s && !ft_isspace(*s))
 			first[i++] = *s++;
 		first[i] = 0;
-		while (*s && ft_isspace(*s))
-			s++;
 	}
 	while (*s)
 	{
@@ -42,10 +40,7 @@ void	rostring(char *s)
 		if (*s && !ft_isspace(*s))
 		{
 			while (*s && !ft_isspace(*s))
-			{
-				write(1, s, 1);
-				s++;
-			}
+				write(1, s++, 1);
 			write(1, " ", 1);
 		}
 	}
