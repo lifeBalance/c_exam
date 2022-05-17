@@ -19,7 +19,7 @@ Some exercises have to do with converting numbers to strings, or dealing with pr
 ## Algorithms
 Lastly there's a group of exercises where we have to come up with some algorithm:
 
-* [brackets]()
+* [brackets](./algorithms/brackets.md)
 * [options]()
 * [print_memory]()
 
