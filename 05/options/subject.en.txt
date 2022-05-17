@@ -23,6 +23,10 @@ $>./options -abc -ijk
 00000000 00000000 00000111 00000111
 $>./options -z
 00000010 00000000 00000000 00000000
+$>./options -z hive
+00000010 00000000 00000000 00000000
+$>./options Bonjour
+00000000 00000000 00000000 00000000
 $>./options -abc -hijk
 options: abcdefghijklmnopqrstuvwxyz
 $>./options -%

@@ -23,17 +23,18 @@ int	validate_options(char **args, int size)
 	int	i;
 	int	j;
 
-	i = 1;
+	i = 0;
 	while (i < size)
 	{
-		j = 0;
-		while (args[i][j])
+		if (args[i][0] == '-')
 		{
-			if (j == 0 && args[i][j] != '-')
-				return (0);	
-			else if (j > 0 && !islowercaseletter(args[i][j]))
-				return (0);
-			j++;
+			j = 1;
+			while (args[i][j])
+			{
+				if (!islowercaseletter(args[i][j]))
+					return (0);
+				j++;
+			}
 		}
 		i++;
 	}
@@ -73,20 +74,23 @@ void	represent(char **s, int size)
 	int				i;
 	int				j;
 
-	i = 1;
+	i = 0;
 	while (i < size)
 	{
-		j = 1;
-		while (s[i][j])
+		if (s[i][0] == '-')
 		{
-			if (s[i][j] == 'h')
+			j = 1;
+			while (s[i][j])
 			{
-				write(1, USAGE, ft_strlen(USAGE));
-				return ;
+				if (s[i][j] == 'h')
+				{
+					write(1, USAGE, ft_strlen(USAGE));
+					return ;
+				}
+				else if (islowercaseletter(s[i][j]))
+					options = set_bit(options, s[i][j] - 'a');
+				j++;
 			}
-			else if (islowercaseletter(s[i][j]))
-				options = set_bit(options, s[i][j] - 'a');
-			j++;
 		}
 		i++;
 	}
@@ -99,8 +103,8 @@ int	main(int argc, char **argv)
 		write(1, USAGE, ft_strlen(USAGE));
 	else
 	{
-		if (validate_options(argv, argc))
-			represent(argv, argc);
+		if (validate_options(argv + 1, argc - 1))
+			represent(argv + 1, argc - 1);
 		else
 			write(1, ERROR, ft_strlen(ERROR));
 	}
