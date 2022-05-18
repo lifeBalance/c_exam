@@ -10,6 +10,7 @@ Note that:
 $>./options -z hive
 00000010 00000000 00000000 00000000
 ```
+
  The `hive` string is simply not parsed!
 
 2. That string, could appear by itself:
