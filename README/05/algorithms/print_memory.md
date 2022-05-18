@@ -64,4 +64,4 @@ It's worth mentioning the trick we used in both loops to iterate through the byt
 <!-- navigation -->
 [home]: ../../README.md
 [back]: ./options.md
-[next]: ./index.md
+[next]: ../index.md

@@ -57,5 +57,5 @@ Regarding stack operations, we have:
 
 <!-- navigation -->
 [home]: ../../README.md
-[back]: ./index.md
+[back]: ../index.md
 [next]: ./options.md
