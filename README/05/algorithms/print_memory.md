@@ -53,10 +53,10 @@ I used three helpers:
 
  In `print_line` we set up two loops to print a single line:
 
-    * One for printing **16 bytes** in **hexadecimal**. (grouped in **eight groups** of **two bytes**.
-    * Another one for printing **16 bytes** as **characters**.
+ * One for printing **16 bytes** in **hexadecimal**. (grouped in **eight groups** of **two bytes**.
+ * Another one for printing **16 bytes** as **characters**.
 
-It's worth mentioning the trick we used in both loops to iterate through the bytes: we combined the values of `i` (which points to a byte in memory) and `j` (whose range goes from `0` to `16`).
+It's worth mentioning the *trick* we used in both loops to iterate through the bytes: we combined the values of `i` (which points to a byte in memory) and `j` (whose range goes from `0` to `16`).
 
 ---
 [:arrow_backward:][back] ║ [:house:][home] ║ [:arrow_forward:][next]
