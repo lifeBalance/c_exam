@@ -41,5 +41,5 @@ For this exercise I used the following helper functions:
 
 <!-- navigation -->
 [home]: ../../README.md
-[back]: ./index.md
-[next]: ./options.md
+[back]: ./brackets.md
+[next]: ./print_memory.md
