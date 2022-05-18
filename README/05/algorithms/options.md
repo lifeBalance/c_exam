@@ -10,7 +10,7 @@ Note that:
 $>./options -z hive
 00000010 00000000 00000000 00000000
 ```
-The `hive` string is simply not parsed!
+ The `hive` string is simply not parsed!
 
 2. That string, could appear by itself:
 ```
@@ -18,7 +18,7 @@ $>./options Bonjour
 00000000 00000000 00000000 00000000
 ```
 
-As you can see, in both cases we still must print the bytes.
+ As you can see, in this case we still must print the bytes, even though all the bits are `0`.
 
 ## My Approach
 For this exercise I used the following helper functions:
