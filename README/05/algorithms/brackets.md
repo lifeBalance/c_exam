@@ -20,7 +20,7 @@ For this program I wrote several helper functions:
 
 * `brackets`: several things going on here:
 
-    * Declare an array of characters using a macro named `SIZE`, and an integer named `top` to keep track of the last element pushed onto the stack.
+    * Declare an instance of `t_stack` (on the **memory stack**, not the **heap**), and initialize it using a `struct` literal.
     * Set up a loop to traverse the string character by character, ignoring all characters except for:
 
         * **Opening brackets**, that are pushed onto the stack (if it's not full).
@@ -29,7 +29,7 @@ For this program I wrote several helper functions:
             * If they match what is at the `top` of the stack (and the stack is not empty), trigger a `pop` operation.
             * Else the program exits.
 
-    * Outside the loop we return the expression `is_empty(&stack)`.
+    * Outside the loop we return the expression `is_empty(&stack)`. Meaning that if the **stack** is empty, we matched all the brackets and the expression was `OK`.
 
 ## The stack
 For the stack I create the following `typedef`:
@@ -47,10 +47,14 @@ Regarding stack operations, we have:
 * `is_full` that returns `1` if the `top` has reached the value of `SIZE`; otherwise `0`. 
 * `is_empty` that returns `1` if the `top` is `-1`; otherwise `0`.
 * `peek`: that returns the value of the element at the `top`.
-* `pop`: that returns the element at the top, decreases the value of `top`, and clears the value at the position of the former `top`.
+* `pop`: that does the following:
+
+    * Clears the value of the `stack` at the `top` (set to `0`).
+    * Decreases the value of `top` by one.
+
 * `push`: that increases the `top`, and stores the data argument at the new `top`.
 
-> **IMPORTANT**: Do NOT forget to pass the **address** of the stack to perform stack functions; otherwise we'd be performing stack operations on a **copy** of the stack.
+> **IMPORTANT**: Do NOT forget to pass the **address** of the stack to our stack functions; otherwise we'd be performing stack operations on a **copy** of the `stack` structure.
 
 ---
 [:arrow_backward:][back] ║ [:house:][home] ║ [:arrow_forward:][next]

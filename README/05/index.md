@@ -19,9 +19,11 @@ Some exercises have to do with converting numbers to strings, or dealing with pr
 ## Algorithms
 Lastly there's a group of exercises where we have to come up with some algorithm:
 
-* [brackets](./algorithms/brackets.md)
-* [options](./algorithms/options.md)
-* [print_memory](./algorithms/print_memory.md)
+Exercise                                        | ETA
+------------------------------------------------|-------
+[brackets](./algorithms/brackets.md)            | 20-25 min
+[options](./algorithms/options.md)              | x min
+[print_memory](./algorithms/print_memory.md)    | 20 min
 
 ---
 [:arrow_backward:][back] ║ [:house:][home] ║ [:arrow_forward:][next]
