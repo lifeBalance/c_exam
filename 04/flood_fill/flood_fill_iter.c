@@ -1,6 +1,9 @@
 #include "t_point.h"
 #include "flood_fill.h"
 
+/*
+**	Iterative version
+*/
 static void	fill_row(char **tab, t_point begin)
 {
 	int	j;
