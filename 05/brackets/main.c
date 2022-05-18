@@ -13,14 +13,10 @@ int		is_empty(t_stack *st) { return (st->top == -1); }
 
 char	peek(t_stack *st) { return (st->data[st->top]); }
 
-char	pop(t_stack *st)
+void	pop(t_stack *st)
 {
-	char	ret;
-
-	ret = st->data[st->top];
 	st->data[st->top] = 0;
 	st->top--;
-	return (ret);
 }
 
 void	push(char ch, t_stack *st)
