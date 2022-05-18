@@ -41,6 +41,6 @@ For this exercise I used the following helper functions:
 [:arrow_backward:][back] ║ [:house:][home] ║ [:arrow_forward:][next]
 
 <!-- navigation -->
-[home]: ../../README.md
+[home]: ../../../README.md
 [back]: ./brackets.md
 [next]: ./print_memory.md
