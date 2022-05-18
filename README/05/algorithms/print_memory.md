@@ -34,9 +34,9 @@ First thing I did was to declared a pointer to `unsigned char`, to which I assig
 
 > Note that the second argument (`size`) receives the amount in **bytes** of the memory area (the `sizeof` operator always returns size in **bytes**).
 
-Then, we set up a loop to traverse the array of bytes using an index(`i`). On each iteration we'll call a helper function named `print_line`; this funtion returns an integer that is assigned to `i`.
+Then, we set up a loop to traverse the array of bytes using an index(`i`). On each iteration we'll call a helper function named `print_line`; this funtion returns an integer that is assigned to `i`. `print_line` always returns `16` on each call, meaning that the values of `i` will be: `0`, `16`, `32`, `48`. This last value makes the condition **false** and the loop exits.
 
-> Actually, `print_line` always returns `16` on each call, meaning that the values of `i` will be: `0`, `16`, `32`, `48`. This last value makes the condition **false** and the loop exits.
+> Actually, `print_line` doesn't have to return anything; I just did it so I didn't have to add curly braces in under the `while` loop in `print_memory`. You can do `i += 16` and set the returning value of `print_line` to `void`. 
 
 ## Helpers
 I used three helpers:
