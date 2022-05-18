@@ -22,7 +22,7 @@ Lastly there's a group of exercises where we have to come up with some algorithm
 Exercise                                        | ETA
 ------------------------------------------------|-------
 [brackets](./algorithms/brackets.md)            | 20-25 min
-[options](./algorithms/options.md)              | x min
+[options](./algorithms/options.md)              | 25 min
 [print_memory](./algorithms/print_memory.md)    | 20 min
 
 ---
