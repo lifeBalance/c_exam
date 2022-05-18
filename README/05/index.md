@@ -20,8 +20,8 @@ Some exercises have to do with converting numbers to strings, or dealing with pr
 Lastly there's a group of exercises where we have to come up with some algorithm:
 
 * [brackets](./algorithms/brackets.md)
-* [options]()
-* [print_memory]()
+* [options](./algorithms/options.md)
+* [print_memory](./algorithms/print_memory.md)
 
 ---
 [:arrow_backward:][back] ║ [:house:][home] ║ [:arrow_forward:][next]
