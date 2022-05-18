@@ -14,8 +14,10 @@ int	main(void)
 
 	lst = 0;
 	lst = ft_list_append(lst, ft_list_new("hey", 4));
-	lst = ft_list_append(lst, ft_list_new("ho", 3));
 	lst = ft_list_append(lst, ft_list_new("hey", 4));
+	lst = ft_list_append(lst, ft_list_new("ho", 3));
+	lst = ft_list_append(lst, ft_list_new("ho", 3));
+	lst = ft_list_append(lst, ft_list_new("let's go!", 10));
 	lst = ft_list_append(lst, ft_list_new("let's go!", 10));
 	lst = ft_list_append(lst, ft_list_new("last", 5));
 	ft_print_list(lst);
