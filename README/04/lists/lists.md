@@ -69,11 +69,11 @@ int	main(void)
 	lst = ft_lst_append(lst, ft_lst_new("ho", 3));
 	lst = ft_lst_append(lst, ft_lst_new("let's go!", 10));
 
-    ft_print_lst(lst);  // print the nodes
+	ft_print_lst(lst);  // print the nodes
 
-    // do your thing here!
+	// do your thing here!
 
-    ft_print_list(lst);  // print the nodes again, to see if it worked.
+	ft_print_list(lst);  // print the nodes again, to see if it worked.
 
 	return (0);
 }
