@@ -64,4 +64,4 @@ It's worth mentioning the *trick* we used in both loops to iterate through the b
 <!-- navigation -->
 [home]: ../../README.md
 [back]: ./options.md
-[next]: ../index.md
+[next]: ./rpn_calc.md
