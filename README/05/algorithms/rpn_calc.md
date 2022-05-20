@@ -3,6 +3,10 @@ In this exercise we have to write a **program** that evaluates an expression in 
 
 > Check here the [subject](https://github.com/lifeBalance/c_exam/blob/main/05/rpn_calc/subject.en.txt) of the exercise for more information.
 
+An excellent way of comparing the results of your rpn expressions is to use [dc](https://en.wikipedia.org/wiki/Dc_(computer_program)) command (short for desktop calculator), which is a UNIX old utility that predates even the C language.
+
+> macOS systems usually have installed the [GNU dc](https://www.gnu.org/software/bc/manual/dc-1.05/html_mono/dc.html) implementation.
+
 ## My approach
 This problem presents the perfect scenario for using a [stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)), so that's what I did. This time I put all stack related functions in its own file, with its accompanying header.
 

@@ -4,7 +4,7 @@
 
 int		ft_isdigit(char ch);
 int		ft_isoperator(char ch);
-int		do_op(int a, int b, char op);
+int		do_op(int a, int b, int *c, char op);
 int		rpn(char *s);
 
 int	main(int argc, char **argv)
@@ -22,21 +22,24 @@ int	ft_isdigit(char ch)
 
 int	ft_isoperator(char ch)
 {
-	return (ch == '+' || ch == '-' || ch == '*' || ch == '\\' || ch == '%');
+	return (ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == '%');
 }
 
-int		do_op(int a, int b, char op)
+int		do_op(int a, int b, int *c, char op)
 {
 	if (op == '+')
-		return (a + b);
+		*c = a + b;
 	else if (op == '-')
-		return (a - b);
+		*c = a - b;
 	else if (op == '*')
-		return (a * b);
+		*c = a * b;
+	else if ((op == '/' || op == '%') && b == 0)
+		return (1);
 	else if (op == '/')
-		return (a / b);
-	else
-		return (a % b);
+		*c = a / b;
+	else if (op == '%')
+		*c = a % b;
+	return (0);
 }
 
 int	rpn(char *s)
@@ -44,6 +47,7 @@ int	rpn(char *s)
 	t_stack		stack = {{0}, -1};
 	int			a;
 	int			b;
+	int			c;
 
 	while (*s)
 	{
@@ -65,14 +69,16 @@ int	rpn(char *s)
 				b = pop(&stack);
 			else
 				return (1);
-			push(do_op(b, a, *s), &stack);
+			if (do_op(b, a, &c, *s) != 0)
+				return (1);
+			push(c, &stack);
 		}
 		s++;
 	}
-	a = pop(&stack);
+	c = pop(&stack);
 	if (isempty(&stack))
 	{
-		printf("%d", a);
+		printf("%d", c);
 		return (0);
 	}
 	else
