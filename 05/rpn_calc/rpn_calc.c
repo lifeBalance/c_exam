@@ -55,14 +55,16 @@ int	rpn(char *s)
 			while (*s && ft_isdigit(*s))
 				s++;
 		}
-		else if (ft_isoperator(*s))
+		else if (ft_isoperator(*s) && (!(*(s + 1)) || *(s + 1) == ' '))
 		{
-			if (isempty(&stack))
-				return (1);
 			if (!isempty(&stack))
 				a = pop(&stack);
+			else
+				return (1);
 			if (!isempty(&stack))
 				b = pop(&stack);
+			else
+				return (1);
 			push(do_op(b, a, *s), &stack);
 		}
 		s++;
@@ -76,11 +78,3 @@ int	rpn(char *s)
 	else
 		return (1);
 }
-
----
-[:arrow_backward:][back] ║ [:house:][home] ║ [:arrow_forward:][next]
-
-<!-- navigation -->
-[home]: ../../README.md
-[back]: ./print_memory.md
-[next]: ../index.md
