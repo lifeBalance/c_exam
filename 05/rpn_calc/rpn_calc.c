@@ -62,14 +62,14 @@ int	rpn(char *s)
 		else if (ft_isoperator(*s) && (!(*(s + 1)) || *(s + 1) == ' '))
 		{
 			if (!isempty(&stack))
-				a = pop(&stack);
-			else
-				return (1);
-			if (!isempty(&stack))
 				b = pop(&stack);
 			else
 				return (1);
-			if (do_op(b, a, &c, *s) != 0)
+			if (!isempty(&stack))
+				a = pop(&stack);
+			else
+				return (1);
+			if (do_op(a, b, &c, *s) != 0)
 				return (1);
 			push(c, &stack);
 		}

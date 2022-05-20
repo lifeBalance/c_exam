@@ -25,7 +25,7 @@ int		pop(t_stack *st)
 {
 	int	ret;
 
-	ret = st->data[st->top];
+	ret = peek(st);
 	st->data[st->top] = 0;
 	st->top--;
 	return (ret);
