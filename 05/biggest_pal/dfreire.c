@@ -6,18 +6,22 @@
 /*   By: rodrodri <rodrodri@student.hive.fi >       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/25 18:00:07 by dfreire           #+#    #+#             */
-/*   Updated: 2022/05/22 13:55:10 by rodrodri         ###   ########.fr       */
+/*   Updated: 2022/05/22 16:54:15 by rodrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void print_pal(char *s, int low, int high)
+int	ft_strlen(char *s)
 {
-	while (low <= high)
-		write(1, &s[low++], 1);
+	int len;
+	
+	len = 0;
+	if (s)
+		while (s[len])
+			len++;
+	return (len);
 }
-
 void biggest_pal(char *s)
 {
 	int i;
@@ -27,9 +31,7 @@ void biggest_pal(char *s)
 	int max_len;
 	int start;
 
-	len = 0;
-	while (s[len])
-		len++;
+	len = ft_strlen(s);
 	if (len == 1)
 	{
 		write(1, s, 1);
@@ -37,7 +39,7 @@ void biggest_pal(char *s)
 	}
 	i = 1;
 	max_len = 1;
-	while (++i < len)
+	while (i < len)
 	{ 
 		low = i - 1;
 		high = i;
@@ -63,8 +65,9 @@ void biggest_pal(char *s)
 			--low;
 			++high;
 		}
+		i++;
 	}
-	print_pal(s, start, start + max_len - 1);
+	write(1, s + start, max_len);
 }
 
 int main(int argc, char **argv)
