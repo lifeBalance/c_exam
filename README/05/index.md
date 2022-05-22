@@ -1,11 +1,6 @@
 # Level 05
 Exercises in **level 05** can be classified in the following groups:
 
-## String manipulation
-Exercises where we have to split strings, or print their words in some particular order.
-
-* [biggest_pal]()
-
 ## Linked lists
 The exercises related with linked lists are:
 
@@ -16,6 +11,7 @@ Lastly there's a group of exercises where we have to come up with some algorithm
 
 Exercise                                        | ETA
 ------------------------------------------------|-------
+[biggest_pal](./algorithms/biggest_pal.md)      | x min
 [brackets](./algorithms/brackets.md)            | 20-25 min
 [options](./algorithms/options.md)              | 25 min
 [print_memory](./algorithms/print_memory.md)    | 20 min
