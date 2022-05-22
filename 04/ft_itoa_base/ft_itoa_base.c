@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-static int	count_digits_base(int n, unsigned int base)
+static int	count_digits_base(unsigned int n, int base)
 {
 	int	len;
 
@@ -21,25 +21,23 @@ char	*ft_itoa_base(int value, int base)
 	int				len;
 	unsigned int	cpy;
 
-	len = count_digits_base((base == 10 && value < 0) ? -value : (unsigned int)value, base);
+	if (value < 0 && base == 10)
+		cpy = -value;
+	else
+		cpy = (unsigned int)value;
+	len = count_digits_base(cpy, base);
 	len += (value < 0 && base == 10);
 	s = (char *)malloc(len + 1);
 	if (!s)
 		return (0);
-	s[len] = 0;
-	len--;
-	if (value < 0 && base == 10)
-	{
-		s[0] = '-';
-		cpy = -value;
-	}
-	else
-		cpy = (unsigned int)value;
+	s[len--] = 0;
 	while (len >= (value < 0 && base == 10))
 	{
 		s[len] = "0123456789ABCDEF"[cpy % base];
 		len--;
 		cpy /= base;
 	}
+	if (value < 0 && base == 10)
+		s[0] = '-';
 	return (s);
 }
