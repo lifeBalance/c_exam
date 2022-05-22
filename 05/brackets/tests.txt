@@ -1,0 +1,41 @@
+'(toto)',
+OK
+
+'([)]',
+Error
+
+'' '{[(0 + 0)(1 + 1)](3*(-1)){()}}',
+OK
+OK
+
+, (< This empty test should print just a newline)
+
+'()' '[]' '{}' '' 'toto' '([{}[{(()[])}()]]())(((([])))())',
+OK
+OK
+OK
+OK
+OK
+OK
+
+'()[]{}' '([{}])[({})]{([])}',
+OK
+OK
+
+'(]' '{)' '[}' ')' '}' ')' '(' '{' '['
+Error
+Error
+Error
+Error
+Error
+Error
+Error
+Error
+Error
+
+'({)}' '[()]{}]' '])}' '([{' "(cette (trace n'a pas [de but precis]) {a part embeter (tout le monde)})"
+Error
+Error
+Error
+Error
+OK
