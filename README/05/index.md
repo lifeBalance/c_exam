@@ -4,7 +4,9 @@ Exercises in **level 05** can be classified in the following groups:
 ## Linked lists
 The exercises related with linked lists are:
 
-* [cycle_detector]()
+Exercise                                        | ETA
+------------------------------------------------|-------
+[cycle_detector](./cycle_detector.md)           | 10 min
 
 ## Algorithms
 Lastly there's a group of exercises where we have to come up with some algorithm:
@@ -15,7 +17,7 @@ Exercise                                        | ETA
 [brackets](./algorithms/brackets.md)            | 20-25 min
 [options](./algorithms/options.md)              | 25 min
 [print_memory](./algorithms/print_memory.md)    | 20 min
-[rpn_calc](./algorithms/rpn_calc.md)        | 20 min
+[rpn_calc](./algorithms/rpn_calc.md)             | 20 min
 
 ---
 [:arrow_backward:][back] ║ [:house:][home] ║ [:arrow_forward:][next]
