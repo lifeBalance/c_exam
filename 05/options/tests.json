@@ -31,6 +31,26 @@
         {
             "arg": "-",
             "output": "00000000 00000000 00000000 00000000\n"
+        },
+        {
+            "arg": "-abc -ijk",
+            "output": "00000000 00000000 00000111 00000111\n"
+        },
+        {
+            "arg": "-z",
+            "output": "00000010 00000000 00000000 00000000\n"
+        },
+        {
+            "arg": "-z hive",
+            "output": "00000010 00000000 00000000 00000000\n"
+        },
+        {
+            "arg": "-abc -hijk",
+            "output": "options: abcdefghijklmnopqrstuvwxyz\n"
+        },
+        {
+            "arg": "-%",
+            "output": "Invalid Option\n"
         }
     ]
 }
