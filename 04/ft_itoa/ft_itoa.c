@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-static int	count_digits(int n)
+static int	count_digits(unsigned int n)
 {
 	int	len;
 
@@ -17,29 +17,24 @@ static int	count_digits(int n)
 
 char	*ft_itoa(int nbr)
 {
-	char	*s;
-	int		cpy;
-	int		len;
+	char			*s;
+	unsigned int	cpy;
+	int				len;
 
-	len = count_digits((nbr > 0) ? nbr : -nbr);
+	cpy = (nbr < 0) ? (unsigned int) -nbr : (unsigned int) nbr;
+	len = count_digits(cpy);
 	len += (nbr < 0);
 	s = (char *)malloc(len + 1);
 	if (!s)
 		return (0);
-	s[len] = 0;
-	len--;
-	if (nbr < 0)
-	{
-		s[0] = '-';
-		cpy = -nbr;
-	}
-	else
-		cpy = nbr;
+	s[len--] = 0;
 	while(len >= (nbr < 0))
 	{
 		s[len] = (cpy % 10) + '0';
 		len--;
 		cpy /= 10;
 	}
+	if (nbr < 0)
+		s[0] = '-';
 	return (s);
 }

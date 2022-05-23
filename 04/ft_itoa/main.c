@@ -1,27 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 char	*ft_itoa(int nbr);
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	int	n;
-
-	n = 234;
-	printf("%d: %s\n", n, ft_itoa(n));
-
-	n = -234;
-	printf("%d: %s\n", n, ft_itoa(n));
-
-	n = 0;
-	printf("%d: %s\n", n, ft_itoa(n));
-
-	n = 1001;
-	printf("%d: %s\n", n, ft_itoa(n));
-
-	n = -1001;
-	printf("%d: %s\n", n, ft_itoa(n));
-
-	n = -123456789;
-	printf("%d: %s\n", n, ft_itoa(n));
+	if (argc == 2)
+		printf("%s\n", ft_itoa(atoi(argv[1])));
 	return (0);
 }
