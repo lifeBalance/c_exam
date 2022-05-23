@@ -95,6 +95,7 @@ void	represent(char **s, int size)
 		i++;
 	}
 	print_bits(options);
+	write(1, "\n", 1);
 }
 
 int	main(int argc, char **argv)
