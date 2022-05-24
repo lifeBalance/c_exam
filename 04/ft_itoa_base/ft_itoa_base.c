@@ -21,7 +21,7 @@ char	*ft_itoa_base(int value, int base)
 	int				len;
 	unsigned int	cpy;
 
-	cpy = (unsigned int)value;
+	cpy = (value < 0 && base == 10)? -value : value;
 	len = count_digits_base(cpy, base);
 	len += (value < 0 && base == 10);
 	s = (char *)malloc(len + 1);
