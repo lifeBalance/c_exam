@@ -8,10 +8,10 @@ This exercise is the classic find the [longest palindromic substring](https://en
 
 * [Brute force](https://en.wikipedia.org/wiki/Brute-force_search), which times out with one of the tests.
 * [Dynamic programming](https://en.wikipedia.org/wiki/Dynamic_programming) (which for some reason wasn't working for me).
-* The **expand around center** approach, which consists on traversing the string picking up two indices for the center of the palindrom:
+* The **expand around center** approach, which consists on traversing the string picking up two indices for the **center** of the palindrome:
 
-    * The same value, for **odd palindromes** such as `aba`, where we'd start from the `b` and keep expanding outwards.
-    * Two consecutive indices, for **even palindromes** such as `abba`, where we'd need the index of the first `a` and the one of the second `a`.
+    * The same value (`i` and `i`), for the start and end character of **odd palindromes** such as `aba`. The center of such palindrome would be the `b`, where we'd start and keep expanding outwards.
+    * Two consecutive indices (`i` and `i + 1`, for **even palindromes** such as `abba`, where we'd need the index of the first `a` (`i`) and the one of the second `a` (`i + 1`).
 
 In the main loop we pass the two indices to a function that I named as `expand`, which keeps expanding the indices outwards, checking if each substring it's a palindrome.
 
