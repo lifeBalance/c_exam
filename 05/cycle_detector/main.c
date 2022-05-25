@@ -16,6 +16,12 @@ int main(void)
 	node3 = malloc(sizeof(t_list));
 	node4 = malloc(sizeof(t_list));
 
+	// No cycle should be found here
+	// node1->next = node2;
+	// node2->next = node3;
+	// node3->next = node4;
+
+	// Ooops, there's a cycle: node4 points to node2
 	node1->next = node2;
 	node2->next = node3;
 	node3->next = node4;

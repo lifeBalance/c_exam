@@ -2,18 +2,18 @@
 
 int	cycle_detector(const t_list *list)
 {
-	const t_list	*slow;
-	const t_list	*fast;
+	const t_list	*turtle;
+	const t_list	*hare;
 
 	if (!list)
 		return (0);
-	slow = list;
-	fast = list;
-	while (fast && fast->next)
+	turtle = list;
+	hare = list;
+	while (hare && hare->next)
 	{
-		slow = slow->next;
-		fast = fast->next->next;
-		if (fast == slow)
+		turtle = turtle->next;
+		hare = hare->next->next;
+		if (hare == turtle)
 			return (1);
 	}
 	return (0);
