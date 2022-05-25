@@ -3,15 +3,13 @@
 #define	LEFT	0
 #define	RIGHT	1
 
-void	biggest_pal(char *s, int sol[2]);
+void	biggest_pal(char *s, int len);
 int		ft_strlen(char *s);
 
 int	main(int argc, char **argv)
 {
-	int		solution[2] = {0};
-
 	if (argc == 2)
-		biggest_pal(argv[1], solution);
+		biggest_pal(argv[1], ft_strlen(argv[1]));
 	write(1, "\n", 1);
 	return (0);
 }
@@ -53,40 +51,35 @@ void	init_dp(int len, int dp[len][len])
 	}
 }
 
-void		biggest_pal(char *s, int sol[2])
+void		biggest_pal(char *s, int len)
 {
-	int	len = ft_strlen(s);
 	int	dp[len][len];
+	int	sol[2] = {0};
 	int	i;
-	int	k;
+	int	j;
 
 	init_dp(len, dp);
-	k = 0;
-	while (k < len)
+	j = 0;
+	while (j < len)
 	{
 		i = 0;
-		while (k + i < len)
+		while (i < len - j)
 		{
-			if (k == 0)
-				dp[i][i] = 1;
-			else if (k == 1 && s[i] == s[k + i])
-				dp[i][k + i] = 1;
-			else if (k >= 2 && s[i] == s[k + i] && dp[i + 1][(k + i) - 1])
+			if (s[i] == s[j] && (dp[i + 1][j - 1] || j - i <= 2))
 			{
-				dp[i][k + i] = 1;
-				if ((k + i) - i + 1 >= sol[RIGHT] - sol[LEFT] + 1)
+				dp[i][j] = 1;
+				if (j - i + 1 >= sol[RIGHT] - sol[LEFT] + 1)
 				{
 					sol[LEFT] = i;
-					sol[RIGHT] = k + i;
+					sol[RIGHT] = j;
 				}
 			}
 			i++;
 		}
-		k++;
+		j++;
 		// print_dp(len, dp);
 	}
-	if (sol[RIGHT] - sol[LEFT] + 1)
-		write (1, s + sol[LEFT], sol[RIGHT] - sol[LEFT] + 1);
+	write (1, s + sol[LEFT], sol[RIGHT] - sol[LEFT] + 1);
 }
 
 int	ft_strlen(char *s)
