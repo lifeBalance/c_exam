@@ -35,11 +35,6 @@ void biggest_pal(char *s)
 	int	solution[2] = {0};
 
 	len = ft_strlen(s);
-	if (len == 1)
-	{
-		write(1, s, 1);
-		return ;
-	}
 	i = 0;
 	while (i < len)
 	{ 
