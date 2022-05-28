@@ -13,14 +13,10 @@ void	print_byte_char(unsigned char b)
 		write(1, ".", 1);
 }
 
-void	print_byte_hex(unsigned char b)
+void	print_byte_hex(unsigned char ch)
 {
-	char	ch;
-
-	ch = "0123456789abcdef"[b / 16];
-	write(1, &ch, 1);
-	ch = "0123456789abcdef"[b % 16];
-	write(1, &ch, 1);
+	write(1, &"0123456789abcdef"[ch / 16], 1);
+	write(1, &"0123456789abcdef"[ch % 16], 1);
 }
 
 int		print_line(unsigned char *arr, int i, int size)
